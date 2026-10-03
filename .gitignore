@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment files
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Results / generated files
+results/
+
+# Raw/intermediate datasets
+data/raw/
+data/interim/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python build files
+build/
+dist/
+*.egg-info/
+# Unused model checkpoints
+models/lstm_ctr_200k.weights.h5
+models/lstm_ctr_500k.weights.h5
+models/lstm_masked_seed42_500k.weights.h5
+models/lstm_masked_seed43_500k.weights.h5
+models/lstm_masked_seed44_500k.weights.h5
+models/transformer_dot_L1_seed42_500k.weights.h5
+models/transformer_dot_L1_seed43_500k.weights.h5
+models/transformer_dot_L1_seed44_500k.weights.h5
+
+# Python cache inside models
+models/__pycache__/
+# Generated training splits
+data/processed/splits/
+
+# Keep only production vocabularies
+data/processed/vocabularies/
