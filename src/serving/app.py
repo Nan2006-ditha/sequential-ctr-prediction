@@ -15,7 +15,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from models.transformer import TransformerCTRModel
 from src.features.vocabulary import Vocabulary
-
+from src.monitoring.prediction_monitor import monitor_predictions
 
 # --------------------------------------------------
 # Configuration
@@ -265,7 +265,7 @@ def predict(request: PredictionRequest):
     probability = float(
         model(features, training=False).numpy()[0][0]
     )
-
+    monitor_predictions([probability])
     return {
         "click_probability": probability,
         "prediction": int(probability >= 0.5),
